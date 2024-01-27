@@ -67,7 +67,23 @@
           </ul>
         </nav>
       </div>
-      <div class="col"><h1>hello</h1></div>
+      <div class="col">
+        <form id="transactionForm" novalidate>
+          <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" required />
+          </div>
+
+          <button type="submit" class="btn btn-outline-dark btn-lg">
+            Add Transaction
+          </button>
+        </form>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

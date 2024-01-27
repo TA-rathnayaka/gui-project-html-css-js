@@ -9,9 +9,4 @@ $(document).ready(function () {
 
     form.addClass("was-validated");
   });
-
-  form.find("input").on("input", function () {
-    $(this).removeClass("is-invalid is-valid");
-    form.removeClass("was-validated");
-  });
 });

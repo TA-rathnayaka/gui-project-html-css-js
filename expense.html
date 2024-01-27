@@ -18,7 +18,7 @@
       <nav
         class="navbar navbar-expand-lg navbar-light shadow-lg p-3 mb-5 rounded"
       >
-        <a class="navbar-brand brand" href="#">Financial Tracker</a>
+        <a class="navbar-brand brand" href="./index.html">Financial Tracker</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -67,8 +67,46 @@
           </ul>
         </nav>
       </div>
-      <div class="col"><h1>hello</h1></div>
+      
+      <div class="col">
+        <form id="transactionForm" novalidate >
+          <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input
+              type="number"
+              class="form-control"
+              id="amount"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input
+              type="text"
+              class="form-control"
+              id="description"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-outline-dark btn-lg">
+            Add Transaction
+          </button>
+        </form>
+        <table class="table my-5 rounded ">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Description</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="transactionTableBody"></tbody>
+        </table>
+      </div>
     </div>
+      </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script
@@ -77,6 +115,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./dashboard.js"></script>
+    <script src="./expense.js"></script>
   </body>
 </html>

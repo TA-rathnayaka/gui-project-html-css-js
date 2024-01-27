@@ -67,7 +67,33 @@
           </ul>
         </nav>
       </div>
-      <div class="col"><h1>hello</h1></div>
+      <div class="col">
+        <form id="incomeForm" novalidate>
+          <div class="mb-3">
+            <label for="income-amount" class="form-label">Amount</label>
+            <input
+              type="number"
+              class="form-control"
+              id="income-amount"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="income-source" class="form-label">Source</label>
+            <select id="income-source" class="form-select">
+              <option value="">Select source</option>
+              <option value="salary">Salary</option>
+              <option value="business">Business</option>
+              <option value="investment">Investment</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-outline-success btn-lg">
+            Add Income
+          </button>
+        </form>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
