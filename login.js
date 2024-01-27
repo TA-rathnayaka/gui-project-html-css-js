@@ -10,7 +10,6 @@ $(document).ready(function () {
     form.addClass("was-validated");
   });
 
-  // Reset validation classes on input change
   form.find("input").on("input", function () {
     $(this).removeClass("is-invalid is-valid");
     form.removeClass("was-validated");
