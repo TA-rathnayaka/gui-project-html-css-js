@@ -8,8 +8,34 @@
 }
 
 .first-section h3 {
-  font-size: 48px;
-  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+}
+.first-section p {
+  font-size: 1.2rem;
+}
+
+.image-box {
+  --dot-bg: white;
+  --dot-color: black;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background: linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+
+.app-img {
+  height: 40rem;
 }
 
 .carousel-item {
@@ -58,4 +84,20 @@
 #expense-img {
   width: 120px;
   margin: 1rem auto;
+}
+
+#total-income {
+  font-size: 2rem;
+}
+
+#total-expense {
+  font-size: 2rem;
+}
+
+#remainder {
+  font-size: 2rem;
+}
+
+.feedback-text p {
+  font-size: 1.5rem;
 }

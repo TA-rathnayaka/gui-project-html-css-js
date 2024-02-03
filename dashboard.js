@@ -12,9 +12,9 @@ $(document).ready(() => {
   $("#total-income").text(`$${totalIncome}`);
   $("#remainder").text(`$${totalIncome - totalExpense}`);
   const initialColors = [
-    "rgba(255, 99, 132, 0.7)",
-    "rgba(75, 192, 192, 0.7)",
-    "rgba(255, 205, 86, 0.7)",
+    "rgba(97, 103, 122, 1)",
+    "rgba(216, 217, 218, 1)",
+    "rgba(185, 212, 241, 1)",
   ];
   new Chart(document.getElementById("doughnut-chart"), {
     type: "doughnut",
