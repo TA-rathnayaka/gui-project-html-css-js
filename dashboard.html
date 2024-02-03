@@ -59,15 +59,39 @@
               <a class="nav-link" href="./income.html">Income</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./budget.html">Budget Plan</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="./expense.html">Expenses</a>
             </li>
           </ul>
         </nav>
       </div>
-      <div class="col"><h1>hello</h1></div>
+      <div class="col">
+        <div class="mb-5 report">
+          <div class="row">
+            <div class="py-3 mx-3 col-md-3 text-light bg-dark rounded">
+              <h3>Total Income</h3>
+              <p id="total-income">$0</p>
+            </div>
+            <div class="py-3 mx-3 col-md-3 text-light bg-dark rounded">
+              <h3>Total Expenses</h3>
+              <p id="total-expense">$0</p>
+            </div>
+
+            <div class="py-3 mx-3 col-md-3 text-light bg-dark rounded">
+              <h3>Remainder</h3>
+              <p id="remainder">$0</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="my-3">Expense Report</h3>
+          <div class="card bg-dark p-5">
+            <canvas id="doughnut-chart"></canvas>
+          </div>
+          </div>
+          
+            
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
