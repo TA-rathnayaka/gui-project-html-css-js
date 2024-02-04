@@ -56,19 +56,19 @@ $(document).ready(() => {
     e.preventDefault();
     const amount = parseFloat($("#income-amount").val());
     const source = $("#income-source").val();
+    if (amount && source) {
+      if (!incomeChart.data.labels.includes(source)) {
+        incomeChart.data.labels.push(source);
+        incomeChart.data.datasets[0].data.push(amount);
+      } else {
+        let index = incomeChart.data.labels.indexOf(source);
+        let existingAmount = incomeChart.data.datasets[0].data[index];
+        let updatedAmount = parseInt(existingAmount) + parseInt(amount);
 
-    if (!incomeChart.data.labels.includes(source)) {
-      incomeChart.data.labels.push(source);
-      incomeChart.data.datasets[0].data.push(amount);
-    } else {
-      let index = incomeChart.data.labels.indexOf(source);
-      let existingAmount = incomeChart.data.datasets[0].data[index];
-      let updatedAmount = parseInt(existingAmount) + parseInt(amount);
+        incomeChart.data.datasets[0].data[index] = updatedAmount;
+      }
 
-      incomeChart.data.datasets[0].data[index] = updatedAmount;
-    }
-
-    const newRow = `<tr>
+      const newRow = `<tr>
                       <th scope="row">${incomeChart.data.labels.length}</th>
                       <td>${amount}</td>
                       <td>${source}</td>
@@ -76,18 +76,19 @@ $(document).ready(() => {
                         incomeChart.data.labels.length - 1
                       })">Remove</button></td>
                     </tr>`;
-    incomeTableBody.append(newRow);
+      incomeTableBody.append(newRow);
 
-    localStorage.setItem(
-      "incomeLabels",
-      JSON.stringify(incomeChart.data.labels)
-    );
-    localStorage.setItem(
-      "incomeData",
-      JSON.stringify(incomeChart.data.datasets[0].data)
-    );
+      localStorage.setItem(
+        "incomeLabels",
+        JSON.stringify(incomeChart.data.labels)
+      );
+      localStorage.setItem(
+        "incomeData",
+        JSON.stringify(incomeChart.data.datasets[0].data)
+      );
 
-    incomeChart.update();
+      incomeChart.update();
+    }
   });
 
   window.removeEntry = (index) => {
